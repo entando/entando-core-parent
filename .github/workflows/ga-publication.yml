@@ -1,9 +1,13 @@
 name: GA Publication
 
 on:
-  release:
-    types:
-      - created
+  push:
+    branches:
+      - 'ga-test'
+
+  #release:
+    #types:
+      #- created
 
 env:
   ENTANDO_OPT_USE_PPL_TAG: "v1.0.1"
