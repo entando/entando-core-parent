@@ -1,5 +1,5 @@
-<?xml version="1.0"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
     <parent>
@@ -10,7 +10,7 @@
     <groupId>org.entando</groupId>
 
     <artifactId>entando-core-parent</artifactId>
-    <version>6.4.24</version>
+    <version>6.4.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>Entando Core Maven Parent POM</name>
@@ -96,6 +96,7 @@
         <commons-digester.version>2.1</commons-digester.version>
         <logback.version>1.2.4</logback.version>
         <logback-json.version>0.1.5</logback-json.version>
+        <logback-jackson.version>0.1.5</logback-jackson.version>
         <aspectj.version>1.9.7</aspectj.version>
         <ormlite-jdbc.version>4.40</ormlite-jdbc.version>
         <slf4j.version>1.7.31</slf4j.version>
@@ -524,7 +525,7 @@
             <dependency>
                 <groupId>ch.qos.logback.contrib</groupId>
                 <artifactId>logback-jackson</artifactId>
-                <version>${logback-json.version}</version>
+                <version>${logback-jackson.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
