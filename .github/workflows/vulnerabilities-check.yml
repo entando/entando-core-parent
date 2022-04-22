@@ -1,0 +1,29 @@
+name: VULNERABILITIES-CHECK-CYCLE
+
+on:
+  pull_request:
+    types:
+      - opened
+    branches:
+      - develop
+
+jobs:
+  checking-out:
+    runs-on: ubuntu-latest
+    env:
+      ENTANDO_BOT_TOKEN: ${{ secrets.ENTANDO_BOT_TOKEN }}
+      ENTANDO_OPT_OKD_LOGIN_URL: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_URL }}"
+      ENTANDO_OPT_OKD_LOGIN_TOKEN: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_TOKEN }}"
+      ENTANDO_OPT_OKD_LOGIN_NAMESPACE: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_NAMESPACE }}"
+      ENTANDO_OPT_OKD_LOGIN_INSECURE: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_INSECURE }}"
+      ENTANDO_OPT_OKD_CLI_URL: "${{ secrets.ENTANDO_OPT_OKD_CLI_URL }}"
+    steps:
+      - name: "CHECKOUT"
+        id: CHECKOUT
+        run: |
+          ${{ secrets.ENTANDO_OPT_PPL_INSTALL_CMD }}
+          ~/ppl-run checkout-branch \
+            --lcd "$LOCAL_CLONE_DIR" \
+            --token "$ENTANDO_BOT_TOKEN" \
+          ;
+          ~/ppl-run generic GENERATE-BUILD-CACHE-KEY "BUILD_CACHE_KEY" --lcd "$LOCAL_CLONE_DIR" >> $GITHUB_ENV
