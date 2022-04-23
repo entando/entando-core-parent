@@ -10,7 +10,7 @@ on:
       - develop
 
 env:
-  #ENTANDO_OPT_USE_PPL_TAG: "v1.3.0"
+  ENTANDO_OPT_USE_PPL_TAG: "v1.3.0"
   LOCAL_CLONE_DIR: "local-checkout"
   
 jobs:
@@ -19,12 +19,11 @@ jobs:
     env:
       ENTANDO_BOT_TOKEN: ${{ secrets.ENTANDO_BOT_TOKEN }}
     steps:
+      #~ CHECKOUT
       - name: "CHECKOUT"
         id: CHECKOUT
         run: |
-        #${{ secrets.ENTANDO_OPT_PPL_INSTALL_CMD }}
-          bash <(curl -qsL "https://raw.githubusercontent.com/entando/entando-pipelines/v1.3.0/macro/install.sh")
-          #Remove line above
+          ${{ secrets.ENTANDO_OPT_PPL_INSTALL_CMD }}
           ~/ppl-run checkout-branch \
             --lcd "$LOCAL_CLONE_DIR" \
             --token "$ENTANDO_BOT_TOKEN" \
