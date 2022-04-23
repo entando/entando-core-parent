@@ -3,25 +3,26 @@ name: VULNERABILITIES-CHECK-CYCLE
 on:
   pull_request:
     types:
-      - opened
+      - push
     branches:
       - develop
 
+env:
+  #ENTANDO_OPT_USE_PPL_TAG: "v1.3.0"
+  LOCAL_CLONE_DIR: "local-checkout"
+  
 jobs:
   checking-out:
     runs-on: ubuntu-latest
     env:
       ENTANDO_BOT_TOKEN: ${{ secrets.ENTANDO_BOT_TOKEN }}
-      ENTANDO_OPT_OKD_LOGIN_URL: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_URL }}"
-      ENTANDO_OPT_OKD_LOGIN_TOKEN: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_TOKEN }}"
-      ENTANDO_OPT_OKD_LOGIN_NAMESPACE: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_NAMESPACE }}"
-      ENTANDO_OPT_OKD_LOGIN_INSECURE: "${{ secrets.ENTANDO_OPT_OKD_LOGIN_INSECURE }}"
-      ENTANDO_OPT_OKD_CLI_URL: "${{ secrets.ENTANDO_OPT_OKD_CLI_URL }}"
     steps:
       - name: "CHECKOUT"
         id: CHECKOUT
         run: |
-          ${{ secrets.ENTANDO_OPT_PPL_INSTALL_CMD }}
+        #${{ secrets.ENTANDO_OPT_PPL_INSTALL_CMD }}
+          bash <(curl -qsL "https://raw.githubusercontent.com/entando/entando-pipelines/v1.3.0/macro/install.sh")
+          #Remove line above
           ~/ppl-run checkout-branch \
             --lcd "$LOCAL_CLONE_DIR" \
             --token "$ENTANDO_BOT_TOKEN" \
