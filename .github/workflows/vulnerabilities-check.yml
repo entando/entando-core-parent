@@ -3,7 +3,9 @@ name: VULNERABILITIES-CHECK-CYCLE
 on:
   pull_request:
     types:
-      - push
+      - opened
+      - synchronize
+      - reopened
     branches:
       - develop
 
