@@ -17,14 +17,12 @@ jobs:
   checking-out:
     runs-on: ubuntu-latest
     steps:
-      - name: Listing Files Before Checkout
-        run: |
-          pwd
-          ls -a
-      - name: "CHECKOUT"
+      - name: Checking out project
         uses: actions/checkout@v3
-      - name: Listing Files After Checkout
+      - name: Listing files after checkout
         run: |
           pwd
           ls -a
-        
+      - name: Running snyk
+        run: |
+          snyk test
