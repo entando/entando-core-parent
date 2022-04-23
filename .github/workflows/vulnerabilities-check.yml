@@ -32,7 +32,7 @@ jobs:
           cd scan-prj
           echo "Printing directory after cd - auxiliary pom"
           pwd
-          sh build-pom.sh
+          bash build-pom.sh
       - name: Run Snyk to check for vulnerabilities
         run: |
           echo "Printing directory before cd - snyk scan"
