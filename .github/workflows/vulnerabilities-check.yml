@@ -24,6 +24,6 @@ jobs:
           pwd
           ls -a
       - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/maven-3-jdk-11@v0.3.0
+        uses: snyk/actions/maven-3-jdk-11@0.3.0
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
