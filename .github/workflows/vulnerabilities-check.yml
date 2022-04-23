@@ -27,11 +27,19 @@ jobs:
         uses: snyk/actions/setup@0.3.0
       - name: Building auxiliary pom
         run: |
+          echo "Printing directory before cd - auxiliary pom"
+          pwd
           cd scan-prj
+          echo "Printing directory after cd - auxiliary pom"
+          pwd
           sh build-pom.sh
       - name: Run Snyk to check for vulnerabilities
         run: |
+          echo "Printing directory before cd - snyk scan"
+          pwd
           cd scan-prj
+          echo "Printing directory after cd - snyk scan"
+          pwd
           snyk test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
