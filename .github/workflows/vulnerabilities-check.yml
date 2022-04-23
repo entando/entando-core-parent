@@ -26,7 +26,9 @@ jobs:
       - name: Installing Snyk
         uses: snyk/actions/setup@0.3.0
       - name: Building auxiliary pom
-        run: sh scan-prj/build-pom.sh
+        run: |
+          cd scan-prj
+          sh build-pom.sh
       - name: Run Snyk to check for vulnerabilities
         run: |
           cd scan-prj
