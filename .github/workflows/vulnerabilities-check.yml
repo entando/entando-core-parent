@@ -16,16 +16,15 @@ env:
 jobs:
   checking-out:
     runs-on: ubuntu-latest
-    env:
-      ENTANDO_BOT_TOKEN: ${{ secrets.ENTANDO_BOT_TOKEN }}
     steps:
-      #~ CHECKOUT
-      - name: "CHECKOUT"
-        id: CHECKOUT
+      - name: Listing Files Before Checkout
         run: |
-          ${{ secrets.ENTANDO_OPT_PPL_INSTALL_CMD }}
-          ~/ppl-run checkout-branch \
-            --lcd "$LOCAL_CLONE_DIR" \
-            --token "$ENTANDO_BOT_TOKEN" \
-          ;
-          ~/ppl-run generic GENERATE-BUILD-CACHE-KEY "BUILD_CACHE_KEY" --lcd "$LOCAL_CLONE_DIR" >> $GITHUB_ENV
+          pwd
+          ls -a
+      - name: "CHECKOUT"
+        uses: actions/checkout@v3
+      - name: Listing Files After Checkout
+        run: |
+          pwd
+          ls -a
+        
