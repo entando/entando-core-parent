@@ -42,6 +42,7 @@ jobs:
   # PREPARE
   
   prepare:
+    if: false
     runs-on: ubuntu-latest
     outputs:
       SCAN_MATRIX: ${{ steps.START.outputs.SCAN_MATRIX }}
