@@ -24,7 +24,7 @@ jobs:
           pwd
           ls -a
       - name: Installing Snyk
-        uses: snyk/actions/setup@v0.3.0
+        uses: snyk/actions/setup@0.3.0
       - name: Run Snyk to check for vulnerabilities
         run: |
           snyk test
