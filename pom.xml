@@ -5,7 +5,7 @@
     <parent>
         <groupId>org.entando</groupId>
         <artifactId>entando-maven-root</artifactId>
-        <version>7.1.1</version>
+        <version>7.1.1-ENG-4147-PR-15</version>
     </parent>
     <groupId>org.entando</groupId>
 
