@@ -13,6 +13,10 @@
     <version>7.2.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>entando-engine</module>
+    </modules>
+
     <name>Entando Core Maven Parent POM</name>
     <description>Entando Core Maven Parent POM</description>
     <inceptionYear>2019</inceptionYear>
