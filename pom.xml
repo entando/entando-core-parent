@@ -97,7 +97,7 @@
         <ormlite-jdbc.version>4.40</ormlite-jdbc.version>
         <liquibase-core.version>4.4.3</liquibase-core.version>
         <slf4j.version>1.7.31</slf4j.version>
-        <jettison.version>1.4.1</jettison.version>
+        <jettison.version>1.5.2</jettison.version>
         <json.version>20210307</json.version>
         <httpclient.version>4.5.13</httpclient.version>
         <jaxb-impl.version>3.0.1</jaxb-impl.version>
