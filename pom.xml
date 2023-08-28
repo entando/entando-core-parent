@@ -70,11 +70,11 @@
             jdbc:derby:${project.build.directory}/test/db/${project.artifactId}testServ;create=true
         </test.database.serv.url>
         <!--dependency versions-->
-        <spring.version>5.3.8</spring.version>
-        <springsecurity.version>5.5.1</springsecurity.version>
-        <springsecurityoauth2.version>2.5.1.RELEASE</springsecurityoauth2.version>
+        <spring.version>5.3.27</spring.version>
+        <springsecurity.version>5.5.7</springsecurity.version>
+        <springsecurityoauth2.version>2.5.2.RELEASE</springsecurityoauth2.version>
         <spring-session-data-redis.version>2.7.0</spring-session-data-redis.version>
-        <struts2.version>2.5.26</struts2.version>
+        <struts2.version>2.5.31</struts2.version>
         <cxf.version>3.3.10</cxf.version>
         <jackson.version>2.11.4</jackson.version>
         <hibernate-validator-version>6.0.20.Final</hibernate-validator-version>
@@ -84,19 +84,19 @@
         <springfox-swagger2.version>2.8.0</springfox-swagger2.version>
         <byte-buddy.version>1.9.10</byte-buddy.version>
         <guava.version>30.0-jre</guava.version>
-        <spring-data-rest-webmvc.version>3.1.3.RELEASE</spring-data-rest-webmvc.version>
+        <spring-data-rest-webmvc.version>3.5.6</spring-data-rest-webmvc.version>
         <commons-beanutils.version>1.9.4</commons-beanutils.version>
         <commons-chain.version>1.2</commons-chain.version>
         <commons-text.version>1.10.0</commons-text.version>
-        <commons-codec.version>1.12</commons-codec.version>
+        <commons-codec.version>1.15</commons-codec.version>
         <commons-collections.version>3.2.2</commons-collections.version>
-        <commons-dbcp2.version>2.5.0</commons-dbcp2.version>
-        <freemarker.version>2.3.28</freemarker.version>
+        <commons-dbcp2.version>2.9.0</commons-dbcp2.version>
+        <freemarker.version>2.3.31</freemarker.version>
         <commons-validator.version>1.3.1</commons-validator.version>
         <taglibs-standard-impl.version>1.2.5</taglibs-standard-impl.version>
         <assertj-core.version>3.11.1</assertj-core.version>
         <commons-digester.version>1.8</commons-digester.version>
-        <logback.version>1.2.3</logback.version>
+        <logback.version>1.2.7</logback.version>
         <logback-json.version>0.1.5</logback-json.version>
         <aspectj.version>1.8.0</aspectj.version>
         <ormlite-jdbc.version>4.40</ormlite-jdbc.version>
@@ -137,11 +137,11 @@
         <xml-apis.version>1.4.01</xml-apis.version>
         <oro.version>2.0.8</oro.version>
         <xom.version>1.2.5</xom.version>
-        <esapi.version>2.1.0.1</esapi.version>
-        <tika-version>1.26</tika-version>
+        <esapi.version>2.4.0.0</esapi.version>
+        <tika-version>1.28.4</tika-version>
         <c3p0.version>0.9.5.4</c3p0.version>
         <vorbis-java-tika.version>0.8</vorbis-java-tika.version>
-        <metadata-extractor.version>2.11.0</metadata-extractor.version>
+        <metadata-extractor.version>2.18.0</metadata-extractor.version>
         <commons-collections4.version>4.1</commons-collections4.version>
         <lombok.version>1.18.2</lombok.version>
         <maven-surefire-plugin.version>3.0.0-M4</maven-surefire-plugin.version>
